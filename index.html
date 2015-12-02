@@ -2,10 +2,32 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Matteo Cellucci's blog</title>
-</head>
+	<title>Matteo Cellucci | My blog</title>
+	<!-- Font from  https://github.com/chrissimpkins/Hack -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack-extended.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/template.css">
 <body>
-	<h1>Mod-Rewrite is not enabled</h1>
-	<p>Enable it on web server</p>
+	<div id="conteiner" class="wrapper relativize">
+		<header id="title-bar">
+			<div id="close" class="title-bar-button"></div>
+			<div id="minimize" class="title-bar-button"></div>
+			<div id="maximize" class="title-bar-button"></div>	
+		 	<h2 id="page-title" class="null">guest@matteocellucci.github.io</h2>
+		</header>
+		<div id="content">
+			<article>
+				<p class="article-command">[guest@matteocellucci.github.io ~]$ stat -c %y argument/articlename.txt</p>
+				<p class="article-response"><time>2015-11-24 15:12:06.592+0100</time></p>
+				<p class="article-command">[guest@matteocellucci.github.io ~]$ cat home.txt</p>
+				<h2 class="article-title">Welcome to my blog</h2>
+				<p class="article-respone">It is still under construction.</p>
+				<p class="article-command empty-command">[guest@matteocellucci.github.io ~]$  </p>
+			</article>
+		</div>
+	</div>	
+	<footer id="footer-conteiner" class="wrapper relativize">
+		<p>Hosted by <a href="https://github.com/matteocellucci/matteocellucci.github.io">GitHub</a> with <a href="https://github.com/matteocellucci/matteocellucci.github.io/blob/master/doc/LICENSE">The MIT License (MIT)</a> 2015 Matteo Cellucci</p>
+	</footer>
 </body>
 </html>
