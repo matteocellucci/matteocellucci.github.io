@@ -1,0 +1,209 @@
+/**
+ *
+ * Templateing main purpose css
+ *
+ * Index:
+ * 	+ Generics
+ * 	+ Template backbone structure
+ *	+ Header
+ *	+ Content 
+ *	+ Footer
+ *	+ Graphics
+ *	+ Animation
+ */
+
+/*
+ * Generics
+ */
+body {
+	/* Background pattern from subtlepatterns.com */
+	background: #fff url('../images/low_contrast_linen/low_contrast_linen.png') repeat top left;
+	color: #eeeeee; /* var text_color */
+	font-family: Hack, monospace;
+	font-size: 16px;
+}
+.relativize {
+	top: 0;
+	left: 0;
+	position: relative;
+}
+.wrapper {
+	margin: 0 auto;
+}
+.null {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Template backbone structure
+ */
+#conteiner {
+	border-radius: 5px; /* var window_radius */
+	margin: 50px auto;
+	width: 960px;
+	box-shadow: 0 0 20px #000; 
+}
+#title-bar {
+	border-top-left-radius: 5px; /* var window_radius */
+	border-top-right-radius: 5px; /* var window_radius */
+	overflow: hidden;
+	width: 100%;
+	height: 26px;
+	background: #ededed;
+		background: -moz-linear-gradient(top, #ededed 0%, #999999 100%);
+		background: -webkit-linear-gradient(top, #ededed 0%,#999999 100%);
+		background: linear-gradient(to bottom, #ededed 0%,#999999 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#999999', GradientType=0);
+}
+#content {
+	padding: 2px;
+	border-bottom-left-radius: 5px; /* var window_radius */
+	border-bottom-right-radius: 5px; /* var window_radius */
+	background-color: #111111;
+}
+
+/*
+ * Header
+ */
+.title-bar-button {
+	position: absolute; 
+	top: 7px;
+	left: 0;
+	border-radius: 6px;
+	width: 12px;
+	height: 12px;
+	box-shadow: 0 -1px 1px #666, 	
+		    0 1px 1px #ededed;
+}
+#close {
+	left: 7px;
+	background: #ed0000;
+		background: -moz-linear-gradient(top, #ed0000 0%, #990000 100%);
+		background: -webkit-linear-gradient(top, #ed0000 0%, #990000 100%);
+		background: linear-gradient(to bottom, #ed0000 0%, #990000 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed0000', endColorstr='#990000', GradientType=0);
+}
+#minimize {
+	left: 26px;
+	background: #ffa500;
+		background: -moz-linear-gradient(top, #ffa500 0%, #d07000 100%);
+		background: -webkit-linear-gradient(top, #ffa500 0%, #d07000 100%);
+		background: linear-gradient(to bottom, #ffa500 0%, #d07000 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa500', endColorstr='#d07000', GradientType=0);
+}
+#maximize {
+	left: 45px;
+	background: #04b500;
+		background: -moz-linear-gadient(top, #08d000 0%, #088000 100%);
+		background: -webkit-linear-gradient(top, #08d000 0%, #088000 100%);
+		background: linear-gradient(to bottom, #08d000 0%, #088000 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08d000', endColorstr='#088000', GradientType=0);
+}
+#page-title {	
+	display: inline-block;
+	margin-top: 5.5px; 
+	width: 100%;
+	color: #333;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+/*
+ * Content
+ */
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+#content p {
+	margin: 0;
+}
+.article {
+	margin: 0;
+	width: 100%;
+}
+.article-title {
+	text-transform: uppercase;
+}
+.article-image {
+	display: block;
+	margin: 0;
+}
+.article-p {
+	padding-top: 19.2px; /* var padding_content */
+}
+.article-list,
+.article-list ul,
+.article-list ol {
+	margin: 0;
+	padding-top: 19.2px; /* var padding_content */
+	padding-left: 40px; /* var innested_content */
+}
+	#content ol {
+		list-style: decimal inside none;
+	}
+	#content ul {
+		list-style: '+ ' inside none;
+	}
+	.article-list ol {
+		padding-bottom: 19.2px; /* var padding_content */
+	}
+	.article-list ul {
+		padding-bottom: 19.2px; /* var padding_content */
+		list-style: '- ' inside none;
+	}
+	.article-list li:last-child ul,
+	.article-list li:last-child ol {
+		padding-bottom: 0;
+	}
+.article-code,
+.article-quote {
+	margin: 0;
+	padding: 0 40px; /* var innested_content */
+	padding-top: 19.2px; /* var padding_content */
+}
+
+/*
+ * FOOTER
+ */
+#footer-conteiner {
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+	#footer-conteiner a {
+		color: #999999;
+		text-decoration: none;
+	}
+	#footer-conteiner a:hover {
+		color: #eeeeee;
+	}
+/*
+ * GRAPHICS
+ */
+.empty-command:after {
+	content: '';
+	display: inline-block;
+	margin-bottom: -4px; /* inline-block margin fix */
+	width: 9.6px; /* var padding_content / 2 */
+	height: 19.2px; /* var padding_content */
+	background-color: #eeeeee; /* var text_color */
+	animation: blink .5s steps(2, start) infinite alternate;
+}
+
+/*
+ * ANIMATION
+ */
+@keyframes blink {
+	from {visibility: visible; }
+	to { visibility: hidden; }
+}
+
