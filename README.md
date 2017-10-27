@@ -1,8 +1,7 @@
-# My blog
-Hi, I'm Matteo and this is my blog repository. Visit me at  <http://matteocellucci.github.io>. My tools are Vim and Git.
+# CLI in HTML and CSS
 
 ## Troubleshooting
-* Blog is still under construction
+* Under construction
 
 ## Issues
 * **Submit bugs:** [Open an issue](https://github.com/matteocellucci/matteocellucci.github.io/issues/new)
